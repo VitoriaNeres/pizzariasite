@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 app.use(cors());
-const port = 80;
+const port = process.env.PORT || 8080;
 
 var connection = mysql.createConnection({
     host     : 'us-cdbr-east-06.cleardb.net',
